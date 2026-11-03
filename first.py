@@ -19,10 +19,10 @@
 #   print("a is less than b")
 # elif a > b:  
 #   print("a is not less than b")
-# else:
-#   print("both of equal")
+# # else:
+# #   print("both of equal")
 
-if True and True:
-    print("Ami ki humaon"
-          "Or ami kirobot")
-git init
+# if True and True:
+#     print("Ami ki humaon"
+#           "Or ami kirobot")
+# git init
