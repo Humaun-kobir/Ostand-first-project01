@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Humaun Kobir</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: rgba(255, 255, 255, 0.04);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --bg: #0b0f19;
+            --card: rgba(255,255,255,0.05);
+            --border: rgba(255,255,255,0.1);
+            --text: #f8fafc;
+            --muted: #94a3b8;
             --accent: #6366f1;
-            --accent-hover: #4f46e5;
         }
 
         * {
@@ -28,48 +30,47 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
-            color: var(--text-main);
+            background:
+                radial-gradient(circle at 10% 20%, rgba(99,102,241,.2), transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(236,72,153,.15), transparent 40%),
+                var(--bg);
+
             min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 1rem;
+            align-items: center;
+            padding: 20px;
+            color: var(--text);
         }
 
         .profile-card {
             width: 100%;
-            max-width: 380px;
-            background: var(--card-bg);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 2.5rem 2rem;
+            max-width: 400px;
+            padding: 40px 30px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 0.8s ease-out;
+
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border: 1px solid var(--border);
+            border-radius: 25px;
+
+            box-shadow: 0 25px 60px rgba(0,0,0,.5);
+
+            animation: fadeIn 1s ease;
         }
 
         .avatar-container {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 1.5rem auto;
-        }
-
-        .avatar-container::after {
-            content: '';
-            position: absolute;
-            inset: -3px;
-            background: linear-gradient(135deg, var(--accent), #ec4899);
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 25px;
+            padding: 4px;
             border-radius: 50%;
-            z-index: -1;
-            filter: blur(8px);
-            opacity: 0.6;
+
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+
+            box-shadow: 0 0 30px rgba(99,102,241,.4);
         }
 
         .avatar {
@@ -77,88 +78,122 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255, 255, 255, 0.15);
+            object-position: center;
+            border: 3px solid #111827;
+            display: block;
         }
 
         .name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-            margin-bottom: 0.25rem;
+            font-size: 27px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -.5px;
         }
 
         .title {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--accent);
+            color: #818cf8;
+            font-size: 13px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1.25rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
         }
 
         .bio {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 30px;
         }
 
         .email-btn {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
+
             width: 100%;
-            padding: 0.8rem 1.5rem;
-            background: var(--accent);
-            color: #ffffff;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 12px;
+            padding: 15px;
+
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+
             text-decoration: none;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            font-weight: 700;
+            border-radius: 12px;
+
+            transition: .3s ease;
         }
 
         .email-btn:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(99,102,241,.4);
+        }
+
+        .social-text {
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 25px;
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(25px);
             }
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
+        @media(max-width: 480px) {
+            .profile-card {
+                padding: 35px 22px;
+            }
+
+            .name {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="profile-card">
-        <!-- Profile Image (Replace 'your-image.jpg' with your photo URL or filename) -->
+        <!-- Profile Picture -->
         <div class="avatar-container">
-            <img src="profile.png" alt="Profile Picture">
+            <img
+                src="./profile.png"
+                alt="Humaun Kobir Profile Picture"
+                class="avatar"
+                onerror="this.alt='Profile image not found';"
+            >
         </div>
 
-        <!-- Name & Title -->
-        <h1 class="name">Humaun kobir</h1>
+        <!-- Name -->
+        <h1 class="name">Humaun Kobir</h1>
+
+        <!-- Profession -->
         <div class="title">Digital Creator</div>
 
-        <!-- Short Description -->
+        <!-- Bio -->
         <p class="bio">
-            Building clean interfaces, exploring creative ideas, and turning imagination into reality.
+            Building clean interfaces, exploring creative ideas,
+            and turning imagination into reality.
         </p>
 
         <!-- Email Button -->
         <a href="mailto:hk36163@gmail.com" class="email-btn">
-            <i class="fa-regular fa-envelope"></i> Send an Email
+            <i class="fa-regular fa-envelope"></i>
+            Send an Email
         </a>
+
+        <p class="social-text">
+            Designed with passion ❤️
+        </p>
+
     </div>
 
 </body>
