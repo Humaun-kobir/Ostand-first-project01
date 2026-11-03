@@ -3,197 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Humaun Kobir</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>About Me - Humaun Kobir</title>
     <style>
-        :root {
-            --bg: #0b0f19;
-            --card: rgba(255,255,255,0.05);
-            --border: rgba(255,255,255,0.1);
-            --text: #f8fafc;
-            --muted: #94a3b8;
-            --accent: #6366f1;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(99,102,241,.2), transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(236,72,153,.15), transparent 40%),
-                var(--bg);
-
-            min-height: 100vh;
+            background-color: #f4f7f6;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            color: var(--text);
+            min-height: 100vh;
         }
 
-        .profile-card {
+        .card {
+            background: #ffffff;
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             text-align: center;
-
-            background: var(--card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-
-            border: 1px solid var(--border);
-            border-radius: 25px;
-
-            box-shadow: 0 25px 60px rgba(0,0,0,.5);
-
-            animation: fadeIn 1s ease;
         }
 
-        .avatar-container {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 25px;
-            padding: 4px;
+        .profile-img-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px auto;
             border-radius: 50%;
-
-            background: linear-gradient(135deg, #6366f1, #ec4899);
-
-            box-shadow: 0 0 30px rgba(99,102,241,.4);
+            overflow: hidden;
+            border: 4px solid #007bff;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
         }
 
-        .avatar {
+        .profile-img-container img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
-            object-position: center;
-            border: 3px solid #111827;
-            display: block;
         }
 
-        .name {
-            font-size: 27px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -.5px;
+        h1 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            text-transform: capitalize;
         }
 
         .title {
-            color: #818cf8;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            font-size: 14px;
+            color: #7f8c8d;
             margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .bio {
-            color: var(--muted);
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
             font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 30px;
+            color: #333;
+            margin-bottom: 25px;
         }
 
-        .email-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-
-            width: 100%;
-            padding: 15px;
-
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-
+        .contact-info a {
+            color: #007bff;
             text-decoration: none;
-            font-weight: 700;
-            border-radius: 12px;
-
-            transition: .3s ease;
         }
 
-        .email-btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(99,102,241,.4);
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
-        .social-text {
-            color: #64748b;
-            font-size: 12px;
-            margin-top: 25px;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s ease;
         }
 
-        @media(max-width: 480px) {
-            .profile-card {
-                padding: 35px 22px;
-            }
-
-            .name {
-                font-size: 24px;
-            }
+        .btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
-
 <body>
 
-    <div class="profile-card">
-        <!-- Profile Picture -->
-        <div class="avatar-container">
-            <img
-                src="./profile.png"
-                alt="Humaun Kobir Profile Picture"
-                class="avatar"
-                onerror="this.alt='Profile image not found';"
-            >
+    <div class="card">
+        <!-- Profile Picture linked from your files -->
+        <div class="profile-img-container">
+            <img src="picture.png" alt="Humaun Kobir Profile Picture">
         </div>
 
-        <!-- Name -->
-        <h1 class="name">Humaun Kobir</h1>
+        <h1>Humaun Kobir</h1>
+        <div class="title">Developer & Tech Enthusiast</div>
 
-        <!-- Profession -->
-        <div class="title">Digital Creator</div>
-
-        <!-- Bio -->
         <p class="bio">
-            Building clean interfaces, exploring creative ideas,
-            and turning imagination into reality.
+            Hello! I am Humaun Kobir. Welcome to my personal portfolio website. I am passionate about coding, learning new technologies, and building projects.
         </p>
 
-        <!-- Email Button -->
-        <a href="mailto:hk36163@gmail.com" class="email-btn">
-            <i class="fa-regular fa-envelope"></i>
-            Send an Email
-        </a>
+        <div class="contact-info">
+            📧 Email: <a href="mailto:hk36163@gmail.com">hk36163@gmail.com</a>
+        </div>
 
-        <p class="social-text">
-            Designed with passion ❤️
-        </p>
-
+        <div class="social-links">
+            <a href="mailto:hk36163@gmail.com" class="btn">Get in Touch</a>
+        </div>
     </div>
 
 </body>
